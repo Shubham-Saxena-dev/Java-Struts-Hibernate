@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="RegisterBean" type="model.Register"></form-bean>
+		<form-bean name="LoginBean" type="model.Login"></form-bean>
+		<form-bean name="ProjectBean" type="model.Project"></form-bean>
+		<form-bean name="TaskBean" type="model.Task"></form-bean>
+		<!-- <form-bean name="BuildBean" type="model.Build"></form-bean> -->
+	</form-beans>
+
+	
+	<!-- <global-forwards>
+		<forward name="success" path="/success.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+	</global-forwards> -->
+
+	<action-mappings>
+	
+	
+		<action path="/Registration" type="action.RegistrationAction" name="RegisterBean" scope="request">
+		<forward name="success" path="/Home.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+		</action>
+		
+		
+	<action path="/Loginn" type="action.LoginAction" name="LoginBean" scope="request">
+		<forward name="success" path="/Home.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+		</action>
+		
+		
+		
+	<action path="/Projectt" type="action.ProjectAction" name="ProjectBean" parameter="operation" scope="request">
+		<forward name="success" path="/Home.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+		</action>	
+		
+		
+		<!-- <action path="/Buildd" type="action.BuildAction" name="BuildBean" parameter="operation" scope="request">
+		<forward name="success" path="/Home.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+		</action> -->
+		
+			
+	<action path="/Taskk" type="action.TaskAction" name="TaskBean" parameter="operation" scope="request">
+		<forward name="success" path="/Home.jsp" />
+		<forward name="errors" path="/errors.jsp" />
+		</action>	
+		
+		
+		
+	</action-mappings>
+	
+	
+	<!-- <message-resources parameter="mymessages" null="false" /> -->
+
+
+
+	
+
+
+
+</struts-config>          
